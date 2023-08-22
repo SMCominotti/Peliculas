@@ -1,4 +1,5 @@
 import styles from "../components/MovieCard.module.css";
+//con module solo afecta a este componente, pero se importa distinto y se llama distinto tambien desde los classname.
 import { Link } from "react-router-dom";
 export function MovieCard({ movie }) {
   const imageUrl = "https://image.tmdb.org/t/p/w300" + movie.poster_path;
@@ -13,7 +14,6 @@ export function MovieCard({ movie }) {
           alt={movie.title}
           className="movieImage"
         />
-       
       </Link>
        <div className={styles.title}>{movie.title}</div>
     </li>
